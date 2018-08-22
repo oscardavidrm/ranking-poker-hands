@@ -22,7 +22,7 @@ bin/setup
 
 Write a program to evaluate poker hands and determine a winner.
 
-This [guide to poker hand strengths](https://github.com/moneypool/ranking-poker-hands) may be useful.
+This [guide to poker hand strengths](https://www.pokerstars.com/poker/games/rules/hand-rankings/) may be useful.
 
 Your program should accept hands in the following representation:
 
