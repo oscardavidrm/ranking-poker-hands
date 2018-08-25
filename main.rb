@@ -418,7 +418,7 @@ end
 
 
 a = PokerHand.new(["2C", "2C", "2C", "5C", "6C"])
-b = PokerHand.new(["5S", "5S", "5S", "6S", "7S"])
+b = PokerHand.new(["5S", "5S", "5S", "6S", "TS"])
 
 winnerHand(a, b)
 
