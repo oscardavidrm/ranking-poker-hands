@@ -1,0 +1,145 @@
+#CHECK FOR ROYAL FLUSH
+if checkIfRoyalFlush(listOfNumbersPlayerOne, listOfSuitsPlayerOne) || checkIfRoyalFlush(listOfNumbersPlayerTwo, listOfSuitsPlayerTwo)
+    if checkIfRoyalFlush(listOfNumbersPlayerOne, listOfSuitsPlayerOne)
+        if checkIfRoyalFlush(listOfNumbersPlayerTwo, listOfSuitsPlayerTwo)
+            if listOfSuitsPlayerOne.max.to_i > listOfSuitsPlayerTwo.max.to_i
+                winnerCongratulations(firstHand)
+                else
+                winnerCongratulations(secondHand)
+            end
+            else
+            winnerCongratulations(firstHand)
+        end
+        else
+        winnerCongratulations(secondHand)
+    end
+end
+
+#CHECK FOR STRAIGHT FLUSH
+if checkIfStraightFlush(listOfNumbersPlayerOne, listOfSuitsPlayerOne) || checkIfStraightFlush(listOfNumbersPlayerTwo, listOfSuitsPlayerTwo)
+    if checkIfStraightFlush(listOfNumbersPlayerOne, listOfSuitsPlayerOne)
+        if checkIfStraightFlush(listOfNumbersPlayerTwo, listOfSuitsPlayerTwo)
+            if listOfSuitsPlayerOne.max.to_i > listOfSuitsPlayerTwo.max.to_i
+                winnerCongratulations(firstHand)
+                else
+                winnerCongratulations(secondHand)
+            end
+            else
+            winnerCongratulations(firstHand)
+        end
+        else
+        winnerCongratulations(secondHand)
+    end
+end
+
+#CHECK FOR FOUR OF A KIND
+if checkIfFourOfAKind(listOfNumbersPlayerOne) || checkIfFourOfAKind(listOfNumbersPlayerTwo)
+    if checkIfFourOfAKind(listOfNumbersPlayerOne)
+        if checkIfFourOfAKind(listOfNumbersPlayerTwo)
+            if listOfNumbersPlayerOne.max.to_i > listOfNumbersPlayerTwo.max.to_i
+                winnerCongratulations(firstHand)
+                else
+                winnerCongratulations(secondHand)
+            end
+            else
+            winnerCongratulations(firstHand)
+        end
+        else
+        winnerCongratulations(secondHand)
+    end
+end
+
+#CHECK FOR FULLHOUSE
+if checkIfThreeOfAKind(listOfNumbersPlayerOne)
+  if checkNumberOfPairs(listOfNumbersPlayerOne)
+    if checkIfThreeOfAKind(listOfNumbersPlayerTwo)
+      if checkNumberOfPairs(listOfNumbersPlayerTwo)
+        if listOfNumbersPlayerOne.max.to_i > listOfNumbersPlayerTwo.max.to_i
+        winnerCongratulations(firstHand)
+        end
+      else
+        winnerCongratulations(secondHand)
+      end
+    else
+      winnerCongratulations(firstHand)
+    end
+
+  elsif checkNumberOfPairs(listOfNumbersPlayerTwo)
+    winnerCongratulations(secondHand)
+  end
+  elsif checkIfThreeOfAKind(listOfNumbersPlayerTwo)
+  winnerCongratulations(secondHand)
+end
+
+#CHECK FOR FLUSH
+if checkIfFlush(listOfSuitsPlayerOne) || checkIfFlush(listOfSuitsPlayerOne)
+    if checkIfFlush(listOfSuitsPlayerOne)
+        if checkIfFlush(listOfSuitsPlayerTwo)
+            if listOfSuitsPlayerOne.max.to_i > listOfSuitsPlayerTwo.max.to_i
+                winnerCongratulations(firstHand)
+                else
+                winnerCongratulations(secondHand)
+            end
+            else
+            winnerCongratulations(firstHand)
+        end
+        else
+        winnerCongratulations(secondHand)
+    end
+end
+
+#CHECK FOR STRAIGHT
+if checkIfStraight(listOfNumbersPlayerOne) || checkIfStraight(listOfNumbersPlayerTwo)
+    if checkIfStraight(listOfNumbersPlayerOne)
+        if checkIfStraight(listOfNumbersPlayerTwo)
+            if listOfSuitsPlayerOne.max.to_i > listOfSuitsPlayerTwo.max.to_i
+                winnerCongratulations(firstHand)
+                else
+                winnerCongratulations(secondHand)
+            end
+            else
+            winnerCongratulations(firstHand)
+        end
+        else
+        winnerCongratulations(secondHand)
+    end
+end
+
+#CHECK FOR THREE OF A KIND
+if checkIfThreeOfAKind(listOfNumbersPlayerOne) || checkIfThreeOfAKind(listOfNumbersPlayerTwo)
+    if checkIfThreeOfAKind(listOfNumbersPlayerOne)
+        if checkIfThreeOfAKind(listOfNumbersPlayerTwo)
+            if listOfSuitsPlayerOne.max.to_i > listOfSuitsPlayerTwo.max.to_i
+                winnerCongratulations(firstHand)
+                else
+                winnerCongratulations(secondHand)
+            end
+            else
+            winnerCongratulations(firstHand)
+        end
+        else
+        winnerCongratulations(secondHand)
+    end
+end
+
+#CHECK FOR TWO PAIRS
+if checkNumberOfPairs(listOfNumbersPlayerOne) || checkNumberOfPairs(listOfNumbersPlayerTwo)
+  if checkNumberOfPairs(listOfNumbersPlayerOne) > checkNumberOfPairs(listOfNumbersPlayerTwo)
+    winnerCongratulations(firstHand)
+  elsif checkNumberOfPairs(listOfNumbersPlayerOne) == checkNumberOfPairs(listOfNumbersPlayerTwo)
+    if listOfNumbersPlayerOne.max.to_i > listOfNumbersPlayerOnePlayerTwo.max.to_i
+        winnerCongratulations(firstHand)
+    else
+        winnerCongratulations(secondHand)
+    end
+  else
+    winnerCongratulations(secondHand)
+  end
+end
+
+#CHECK FOR HIGH CARD
+if listOfNumbersPlayerOne.max.to_i > listOfNumbersPlayerOnePlayerTwo.max.to_i
+    winnerCongratulations(firstHand)
+else
+    winnerCongratulations(secondHand)
+end
